@@ -1,0 +1,30 @@
+page-raio {
+
+    .centro{
+        display:flex;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: #41cc8d;
+        height: 100vh;
+        width:100vw;
+        margin:0rem;
+    }
+    
+    .scroll-content{
+        display:flex;
+        justify-content: center;
+        background-color:#41cc8d;
+    
+    }
+    input{
+        padding:0.6rem;
+        border-radius:1rem;
+    }
+    
+    form{
+        display:flex;
+        align-content: center;
+    }
+}
