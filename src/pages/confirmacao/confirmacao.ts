@@ -20,7 +20,9 @@ export class ConfirmacaoPage {
  cep;
  valor;
   constructor(public navCtrl: NavController, public navParams: NavParams,  public http: HttpClient) {
-    this.http.get(`https://viacep.com.br/ws/${this.navParams.get("cep")}/json/`).subscribe((resposta) => {
+    this.http
+    .get<any>(`https://viacep.com.br/ws/${this.navParams.get("cep")}/json/`)
+    .subscribe((resposta) => {
       this.valor = resposta.logradouro
     });
   
