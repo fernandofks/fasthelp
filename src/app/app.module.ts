@@ -25,7 +25,8 @@ import { CardPage } from '../pages/card/card';
   entryComponents: [
     MyApp,
     HomePage,
-    RaioPage
+    RaioPage,
+    CardPage,
   ],
   providers: [
     StatusBar,
