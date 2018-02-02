@@ -7,7 +7,7 @@ import { RaioPage } from '../raio/raio';
   templateUrl: 'home.html'
 })
 export class HomePage {
-
+  logo = 'assets/imgs/logo1.png';
   constructor(public navCtrl: NavController) {
 
   }

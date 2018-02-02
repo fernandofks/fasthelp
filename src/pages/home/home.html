@@ -8,11 +8,19 @@
   
   <ion-content padding>
     <div class="centro">
-      <img src="https://cdn0.iconfinder.com/data/icons/healthcare-medicine/512/hospital_location-512.png">
- 
-      <form action="/action_page.php">
-        <input type="text" name="firstname">
-      </form> 
-        
+      <img [src]="logo">
+      <h1>Digite o CEP</h1>
+      <form >
+       
+       <input type="text" name="firstname" >
+       <button ion-button color="primery">Procurar</button>
+     
+     </form>
+    </div>
+    <div>
+      <h1>ou</h1>
+    </div>
+    <div>
+      <button ion-button color="primery" (click)="irParaRaio()">Usar minha localizaçao</button>
     </div>
   </ion-content>
