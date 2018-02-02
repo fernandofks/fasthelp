@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { SaudeProvider } from '../../providers/saude/saude';
+import { HomePage } from '../home/home';
+
 
 /**
  * Generated class for the PreencherPage page.
@@ -15,11 +18,23 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class PreencherPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  hospital = {}
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public provider: SaudeProvider) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PreencherPage');
+  }
+
+
+  inserirDados(){
+    this.provider.hospitais.push(this.hospital)
+    console.log(this.provider.hospitais);
+  }
+
+  irParaHome(){
+    this.navCtrl.push(HomePage);
   }
 
 }

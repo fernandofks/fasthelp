@@ -9,6 +9,11 @@ import { HomePage } from '../pages/home/home';
 import { RaioPage } from '../pages/raio/raio';
 import { CardPage } from '../pages/card/card';
 import { FormularioPage } from '../pages/formulario/formulario';
+import { SaudeProvider } from '../providers/saude/saude';
+import { PreencherPage } from '../pages/preencher/preencher';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { ConfirmacaoPage } from '../pages/confirmacao/confirmacao';
 
 
 @NgModule({
@@ -17,11 +22,15 @@ import { FormularioPage } from '../pages/formulario/formulario';
     HomePage,
     RaioPage,
     CardPage,
-    FormularioPage
+    FormularioPage,
+    PreencherPage,
+    ConfirmacaoPage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    FormsModule,
+    HttpClientModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -30,12 +39,14 @@ import { FormularioPage } from '../pages/formulario/formulario';
     RaioPage,
     CardPage,
     FormularioPage,
-
+    PreencherPage,
+    ConfirmacaoPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    SaudeProvider
   ]
 })
 export class AppModule {}

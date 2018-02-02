@@ -10,11 +10,12 @@
     <div class="centro">
 
       <img [src]="logo">
-      <h1>Digite o CEP</h1>
+      <br>
+      <br>
       <form >
        
-       <input type="text" name="firstname" >
-       <button ion-button color="primery">Procurar</button>
+       <input type="text" name="firstname" placeHolder="Rua ou CEP">
+       <button ion-button (click)="irParaConfirmacao()" color="primery" >Procurar</button>
      
      </form>
     </div>
@@ -22,7 +23,10 @@
       <h1>ou</h1>
     </div>
     <div>
-      <button ion-button color="primery" (click)="irParaRaio()">Usar minha localizaçao</button>
+      <button ion-button color="primery" (click)="irParaConfirmacao()">Usar minha localizaçao</button>
 
     </div>
+<br>
+<br>
+    <button ion-button color="primary" (click)="irParaPreencher()">Ajude!</button>
   </ion-content>

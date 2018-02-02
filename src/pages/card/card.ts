@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { SaudeProvider } from '../../providers/saude/saude';
 
 /**
  * Generated class for the CardPage page.
@@ -14,8 +15,9 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'card.html',
 })
 export class CardPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  hospitais
+  constructor(public navCtrl: NavController, public navParams: NavParams, public provider:SaudeProvider) {
+    this.hospitais = provider.hospitais;  
   }
 
   ionViewDidLoad() {

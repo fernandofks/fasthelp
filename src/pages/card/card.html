@@ -9,16 +9,18 @@
 
 
 <ion-content padding>
-
-<div class="background">
+<ion-item *ngFor="let hospital of hospitais">
+<div  class="background">
   <div class="card">
-    <h1>Nome</h1>
+    <h1>{{hospital.nome}}</h1>
     <div class="tempos">
-      <p>Tempo de espera:y</p>
+      <p>Horário: {{hospital.horario}}</p>
+      <p>Tempo de espera: {{hospital.tempo}}</p>
       </div>
-      <img src="http://sitebarra.com.br/wp-content/uploads/2015/04/656.jpg">
+      <img src="{{hospital.imagem}}">
     </div>
     </div>
+    </ion-item>
 
+    </ion-content>
 
-</ion-content>

@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>preencher</ion-title>
+    <ion-title>Preencher</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -15,30 +15,32 @@
 
 <ion-content padding>
     <ion-content padding>
-        <ion-list class="procura"
+        <ion-list class="procura">
     
             <ion-item>
-              <ion-label class="p">Nome do Hospital</ion-label>
-              <ion-input class="input" type="text"></ion-input>
+              <ion-label  class="p">Nome do Hospital</ion-label>
+              <ion-input [(ngModel)]="hospital.nome" class="input" type="text"></ion-input>
             </ion-item>
           
             <ion-item>
               <ion-label class="p">Horário</ion-label>
-              <ion-input class="input" type="password"></ion-input>
+              <ion-input [(ngModel)]="hospital.horario"class="input" type="text"></ion-input>
             </ion-item>
           
             <ion-item>
                 <ion-label class="p">Estimativa de Espera</ion-label>
-                <ion-input class="input" type="password"></ion-input>
+                <ion-input [(ngModel)]="hospital.tempo" class="input" type="text"></ion-input>
+              </ion-item>
+
+              <ion-item>
+                <ion-label class="p">Link da Imagem</ion-label>
+                <ion-input [(ngModel)]="hospital.imagem" class="input" type="text"></ion-input>
               </ion-item>
 
           </ion-list>
-          
+          <br>
           <div padding>
-            <button block>Cadastrar</button>
+            <button ion-button (click)="inserirDados()" (click)="irParaHome()">Cadastrar</button>
           </div>
     </ion-content>
-    
-
-
 </ion-content>

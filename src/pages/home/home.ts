@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { RaioPage } from '../raio/raio';
+import { PreencherPage } from '../preencher/preencher';
+import { ConfirmacaoPage } from '../confirmacao/confirmacao';
 
 @Component({
   selector: 'page-home',
@@ -13,6 +15,16 @@ export class HomePage {
   }
   irParaRaio(){
     this.navCtrl.push(RaioPage);
+  }
+
+  irParaConfirmacao(){
+
+    this.navCtrl.push(ConfirmacaoPage);
+
+  }
+
+  irParaPreencher(){
+    this.navCtrl.push(PreencherPage);
   }
 
 }
