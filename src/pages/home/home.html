@@ -14,8 +14,8 @@
       <br>
       <form >
        
-       <input type="text" name="firstname" placeHolder="Rua ou CEP">
-       <button ion-button (click)="irParaConfirmacao()" color="primery" >Procurar</button>
+       <input type="text" name="firstname" placeHolder="Rua ou CEP" [(ngModel)]="dados.cep">
+       <button ion-button (click)="irParaConfirmacao()"color="primery" >Procurar</button>
      
      </form>
     </div>

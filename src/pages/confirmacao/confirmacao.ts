@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { RaioPage } from '../raio/raio';
+import { HttpClient } from '@angular/common/http/';
 
 /**
  * Generated class for the ConfirmacaoPage page.
@@ -16,13 +17,25 @@ import { RaioPage } from '../raio/raio';
 })
 export class ConfirmacaoPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+ cep;
+ valor;
+  constructor(public navCtrl: NavController, public navParams: NavParams,  public http: HttpClient) {
+    this.http.get(`https://viacep.com.br/ws/${this.navParams.get("cep")}/json/`).subscribe((resposta) => {
+      this.valor = resposta.logradouro
+    });
+  
+
   }
+
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ConfirmacaoPage');
   }
-irParaRaio(){
+
+  
+
+
+    irParaRaio(){
   this.navCtrl.push(RaioPage);
   }
 }

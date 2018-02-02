@@ -10,21 +10,24 @@ import { ConfirmacaoPage } from '../confirmacao/confirmacao';
 })
 export class HomePage {
   logo = 'assets/imgs/logo1.png';
+  dados={};
+
   constructor(public navCtrl: NavController) {
 
-  }
-  irParaRaio(){
-    this.navCtrl.push(RaioPage);
   }
 
   irParaConfirmacao(){
 
-    this.navCtrl.push(ConfirmacaoPage);
+    this.navCtrl.push(ConfirmacaoPage, this.dados);
+  
+
 
   }
 
   irParaPreencher(){
     this.navCtrl.push(PreencherPage);
   }
+
+
 
 }
