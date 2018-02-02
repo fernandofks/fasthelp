@@ -8,6 +8,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { RaioPage } from '../pages/raio/raio';
 import { CardPage } from '../pages/card/card';
+import { FormularioPage } from '../pages/formulario/formulario';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { CardPage } from '../pages/card/card';
     MyApp,
     HomePage,
     RaioPage,
-    CardPage
+    CardPage,
+    FormularioPage
   ],
   imports: [
     BrowserModule,
@@ -27,6 +29,8 @@ import { CardPage } from '../pages/card/card';
     HomePage,
     RaioPage,
     CardPage,
+    FormularioPage,
+
   ],
   providers: [
     StatusBar,

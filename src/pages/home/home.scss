@@ -1,4 +1,14 @@
 page-home {
+    .centro{
+        display:flex;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: #41cc8d;
+        
+       
+    }
 
     .scroll-content{
         background-color: #41cc8d;
@@ -14,6 +24,7 @@ page-home {
         display: block;
         margin: auto;
         max-width:9rem;
+        max-width: 35%;
     }
  
     .button{
@@ -23,6 +34,11 @@ page-home {
  
     ion-label{
        color: #488aff;
+    }
+
+    form{
+        display:flex;
+        align-content: center;
     }
 
  }
