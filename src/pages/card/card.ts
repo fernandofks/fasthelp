@@ -20,7 +20,7 @@ export class CardPage {
   constructor(public navCtrl: NavController, public navParams: NavParams, public http: HttpClient) {
   
    this.http
-      .get<any>('http://localhost:3000/hospital')
+      .get<any>('http://159.203.92.230:3000/hospital')
       .subscribe((resposta) => {
         this.hospitais = resposta;
       });

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { SaudeProvider } from '../../providers/saude/saude';
+
 import { HomePage } from '../home/home';
 import { HttpClient } from '@angular/common/http';
 
@@ -31,7 +31,7 @@ hospital = {};
 
   inserirDados(){
     this.http
-      .post('http://localhost:3000/hospital', this.hospital)
+      .post('http://159.203.92.230:3000/hospital', this.hospital)
       .subscribe(() => {
         console.log('hospital inserido!');
       });

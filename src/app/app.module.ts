@@ -9,7 +9,6 @@ import { HomePage } from '../pages/home/home';
 import { RaioPage } from '../pages/raio/raio';
 import { CardPage } from '../pages/card/card';
 import { FormularioPage } from '../pages/formulario/formulario';
-import { SaudeProvider } from '../providers/saude/saude';
 import { PreencherPage } from '../pages/preencher/preencher';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -46,7 +45,7 @@ import { ConfirmacaoPage } from '../pages/confirmacao/confirmacao';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    SaudeProvider
+
   ]
 })
 export class AppModule {}
