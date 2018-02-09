@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { SaudeProvider } from '../../providers/saude/saude';
 import { HomePage } from '../home/home';
+import { HttpClient } from '@angular/common/http';
 
 
 /**
@@ -17,21 +18,26 @@ import { HomePage } from '../home/home';
   templateUrl: 'preencher.html',
 })
 export class PreencherPage {
-
-  hospital = {}
-
-  constructor(public navCtrl: NavController, public navParams: NavParams, public provider: SaudeProvider) {
+hospital = {};
+  
+  constructor(public navCtrl: NavController, public navParams: NavParams, public http:HttpClient) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PreencherPage');
   }
 
+  
 
   inserirDados(){
-    this.provider.hospitais.push(this.hospital)
-    console.log(this.provider.hospitais);
-  }
+    this.http
+      .post('http://localhost:3000/hospital', this.hospital)
+      .subscribe(() => {
+        console.log('hospital inserido!');
+      });
+    }
+
+ 
 
   irParaHome(){
     this.navCtrl.push(HomePage);
