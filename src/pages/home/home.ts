@@ -25,9 +25,9 @@ export class HomePage {
 
   inserirDados(){
     this.http
-      .post('http://159.203.92.230:3000/direcao', this.dados)
+      .post('http://localhost:3000/direcao', this.dados)
       .subscribe(() => {
-        console.log('hospital inserido!');
+        console.log('localizacao inserido!');
       });
     }
 

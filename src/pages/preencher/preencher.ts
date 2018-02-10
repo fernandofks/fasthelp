@@ -28,13 +28,11 @@ hospital = {};
     console.log('ionViewDidLoad PreencherPage');
   }
 
-     
-    
 
 
   inserirDados(){
     this.http
-      .post('http://159.203.92.230:3000/hospital', this.hospital)
+      .post('http://localhost:3000/hospital', this.hospital)
       .subscribe(() => {
         console.log('hospital inserido!');
       });

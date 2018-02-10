@@ -17,7 +17,7 @@
        <input type="text" name="firstname" placeHolder="Rua" [(ngModel)]="dados.rua"><br>
        <input type="text" name="firstname" placeHolder="Bairro" [(ngModel)]="dados.bairro"><br>
        <input type="text" name="firstname" placeHolder="Cidade" [(ngModel)]="dados.estado"><br>
-       <button ion-button (click)="irParaConfirmacao()"color="primery" >Procurar</button>
+       <button ion-button (click)="irParaConfirmacao()" (click)= "inserirDados()" color="primery" >Procurar</button>
      
      </form>
     </div>
