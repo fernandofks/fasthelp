@@ -21,13 +21,16 @@ export class PreencherPage {
 hospital = {};
   
   constructor(public navCtrl: NavController, public navParams: NavParams, public http:HttpClient) {
+  
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PreencherPage');
   }
 
-  
+     
+    
+
 
   inserirDados(){
     this.http

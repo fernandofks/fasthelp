@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { RaioPage } from '../raio/raio';
 import { PreencherPage } from '../preencher/preencher';
-import { ConfirmacaoPage } from '../confirmacao/confirmacao';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'page-home',
@@ -12,17 +12,25 @@ export class HomePage {
   logo = 'assets/imgs/logo1.png';
   dados={};
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public http:HttpClient) {
 
   }
 
   irParaConfirmacao(){
 
-    this.navCtrl.push(ConfirmacaoPage, this.dados);
-  
-
+    this.navCtrl.push(RaioPage, this.dados);
 
   }
+
+
+  inserirDados(){
+    this.http
+      .post('http://159.203.92.230:3000/direcao', this.dados)
+      .subscribe(() => {
+        console.log('hospital inserido!');
+      });
+    }
+
 
   irParaPreencher(){
     this.navCtrl.push(PreencherPage);

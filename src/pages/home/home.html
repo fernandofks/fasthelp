@@ -14,7 +14,9 @@
       <br>
       <form >
        
-       <input type="text" name="firstname" placeHolder="Rua ou CEP" [(ngModel)]="dados.cep">
+       <input type="text" name="firstname" placeHolder="Rua" [(ngModel)]="dados.rua"><br>
+       <input type="text" name="firstname" placeHolder="Bairro" [(ngModel)]="dados.bairro"><br>
+       <input type="text" name="firstname" placeHolder="Cidade" [(ngModel)]="dados.estado"><br>
        <button ion-button (click)="irParaConfirmacao()"color="primery" >Procurar</button>
      
      </form>
@@ -22,11 +24,7 @@
     <div>
       <h1>ou</h1>
     </div>
-    <div>
-      <button ion-button color="primery" (click)="irParaConfirmacao()">Usar minha localizaçao</button>
-
-    </div>
 <br>
 <br>
-    <button ion-button color="primary" (click)="irParaPreencher()">Ajude!</button>
+    <button ion-button color="primary" (click)="irParaPreencher()" (click)="inserirDados">Ajude!</button>
   </ion-content>

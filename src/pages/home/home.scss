@@ -39,6 +39,9 @@ page-home {
     form{
         display:flex;
         align-content: center;
+       
+            flex-direction: column;
+        
     }
     input{
         padding:0.6rem;

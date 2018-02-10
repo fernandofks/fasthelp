@@ -37,9 +37,24 @@
                 <ion-input [(ngModel)]="hospital.imagem" class="input" type="text"></ion-input>
               </ion-item>
 
+              <ion-item>
+                <ion-label class="p">Rua</ion-label>
+                <ion-input [(ngModel)]="hospital.rua" class="input" type="text"></ion-input>
+              </ion-item>
+
+              <ion-item>
+                <ion-label class="p">Bairro</ion-label>
+                <ion-input [(ngModel)]="hospital.bairro" class="input" type="text"></ion-input>
+              </ion-item>
+
+              <ion-item>
+                <ion-label class="p">Estado</ion-label>
+                <ion-input [(ngModel)]="hospital.estado" class="input" type="text"></ion-input>
+              </ion-item>
+
           </ion-list>
           <br>
-          <div padding>
+          <div class="padding">
             <button ion-button (click)="inserirDados()" (click)="irParaHome()">Cadastrar</button>
           </div>
     </ion-content>

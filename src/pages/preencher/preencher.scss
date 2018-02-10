@@ -14,16 +14,17 @@ page-preencher {
         display: table;
         border-radius: 5px;
       }
-      button{
-        margin-top: 15px;
-        margin-left: auto;
-        margin-right: auto;
-        display: table;
+
+
+       button-default{
         color: white;
         background-color:#41cc8d;
         border-radius: 3px;
-        padding:2rem;
         font-size:1rem;
       }
       
+      .button{
+        margin-top:200px;
+      }
 }
+
